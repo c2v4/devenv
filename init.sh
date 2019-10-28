@@ -16,7 +16,10 @@ apt-get install -y default-jdk
 
 echo -n "Installing Intellij"
 apt-get install -y snapd
-#snap install intellij-idea-ultimate --classic
+snap install intellij-idea-ultimate --classic
+
+echo -n "Installing Node"
+sudo snap install node --channel=13/stable --classic
 
 echo -n "Installing tooling"
 apt-get install -y tilix yadm fasd git

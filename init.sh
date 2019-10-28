@@ -29,4 +29,4 @@ apt-get install -y zsh
 chsh -s $(which zsh) vagrant
 
 su -c 'ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa' vagrant
-su -c 'yadm clone https://github.com/c2v4/dotfiles' vagrant
+su -c 'yadm clone --recurse-submodules -j8 https://github.com/c2v4/dotfiles' vagrant

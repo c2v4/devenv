@@ -26,7 +26,7 @@ apt-get install -y docker docker-compose
 sudo snap install microk8s --classic
 
 echo -n "Installing tooling"
-apt-get install -y tilix yadm fasd git
+apt-get install -y tilix yadm fasd git maven
 
 echo -n "Installing ZSH"
 apt-get install -y zsh

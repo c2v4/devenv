@@ -8,9 +8,12 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
                 vb.name = "Developer machine"
                 vb.cpus = 2
                 vb.memory = 4096
-				vb.customize ["modifyvm", :id, "--vram", "128"]
+				config.ssh.forward_agent = true
+        config.ssh.forward_x11 = true
+        
+        vb.customize ["modifyvm", :id, "--vram", "128"]
 				vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]								
-				vb.gui = true
+        vb.gui = true
         end
 		
        config.vm.provision "shell", path:"init.sh"		

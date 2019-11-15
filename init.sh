@@ -21,7 +21,7 @@ snap install intellij-idea-ultimate --classic
 echo -n "Installing Node"
 snap install node --channel=13/stable --classic
 
-echo -n "Installing Docker and Kubernetes
+echo -n "Installing Docker and Kubernetes"
 apt-get install -y docker docker-compose
 sudo snap install microk8s --classic
 

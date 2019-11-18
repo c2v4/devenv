@@ -28,6 +28,12 @@ apt-get install -y docker docker-compose
 echo -n "Installing tooling"
 apt-get install -y tilix yadm fasd git maven
 
+echo -n "Configuring autologin"
+echo "[Seat:*]
+autologin-guest=false
+autologin-user=vagrant
+autologin-user-timeout=0" >/etc/lightdm/lightdm.conf.d/autologin.conf
+
 echo -n "Installing ZSH"
 apt-get install -y zsh
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

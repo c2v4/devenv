@@ -24,6 +24,7 @@ snap install node --channel=13/stable --classic
 echo -n "Installing Docker and Kubernetes"
 apt-get install -y docker docker-compose
 #sudo snap install microk8s --classic
+usermod -aG docker vagrant
 
 echo -n "Installing tooling"
 apt-get install -y tilix yadm fasd git maven

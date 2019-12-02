@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
         config.ssh.forward_x11 = true
         
         vb.customize ["modifyvm", :id, "--vram", "128"]
-				vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]								
+	vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]								
         vb.gui = true
         end
 		

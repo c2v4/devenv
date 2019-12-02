@@ -3,6 +3,7 @@ VAGRANT_API_VERSION  = "2"
 Vagrant.configure(VAGRANT_API_VERSION) do |config|
 
         config.vm.box = "ubuntu/bionic64"
+	config.disksize.size = '50GB'
 
         config.vm.provider "virtualbox" do |vb|
                 vb.name = "Developer machine"

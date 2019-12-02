@@ -2,6 +2,7 @@ VAGRANT_API_VERSION  = "2"
 
 Vagrant.configure(VAGRANT_API_VERSION) do |config|
 
+	config.vagrant.plugins = "vagrant-disksize"
         config.vm.box = "ubuntu/bionic64"
 	config.disksize.size = '50GB'
 

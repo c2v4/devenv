@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
                 vb.name = "Developer machine"
                 vb.cpus = 2
                 vb.memory = 4096
-				config.ssh.forward_agent = true
+	config.vm.synced_folder "../.","/home/vagrant/git"
+	config.ssh.forward_agent = true
         config.ssh.forward_x11 = true
         
         vb.customize ["modifyvm", :id, "--vram", "128"]

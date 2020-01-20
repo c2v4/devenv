@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /home/linux-dev-workstation
     docker:
-      - image: zoobab/vagrant-inside-docker
+      - image: c2v4/vagrant-virtualbox
         user: root
 
     steps:

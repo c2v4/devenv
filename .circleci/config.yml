@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    working_directory: /home/linux-dev-workstation
+    docker:
+      - image: pdouble16/vagrant-build-base:latest
+        user: root
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Test Vagrant Up
+          command: |
+            sh build.sh ${VAGRANT_CLOUD_TOKEN} ${CIRCLE_BUILD_NUM}

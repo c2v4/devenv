@@ -10,6 +10,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Test Vagrant Up
+          name: Install plugin
+          command: |
+            vagrant plugin install vagrant-disksize
+      - run:
+          name: Create an image
           command: |
             sh build.sh ${VAGRANT_CLOUD_TOKEN} ${CIRCLE_BUILD_NUM}

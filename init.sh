@@ -19,10 +19,11 @@ apt-fast install -y default-jdk
 echo -n "Installing Intellij"
 apt-fast install -y snapd ubuntu-make
 #snap install intellij-idea-ultimate --classic
-umake ide idea-ultimate
+umake ide idea-ultimate ~/.init.sh
+ln -sf /home/vagrant/.idea/bin/idea.sh /usr/sbin/idea
 
 echo -n "Installing Node"
-snap install node --channel=13/stable --classic
+snap install node --channel=13/stable --classic &
 
 echo -n "Installing Docker and Kubernetes"
 apt-fast install -y docker docker-compose
@@ -49,5 +50,5 @@ su -c 'ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa' vagrant
 su -c 'yadm clone https://github.com/c2v4/dotfiles' vagrant
 su -c 'yadm submodule update --init --recursive' vagrant
 
-
+wait
 apt-fast clean

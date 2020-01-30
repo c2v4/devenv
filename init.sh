@@ -40,7 +40,7 @@ autologin-user=vagrant
 autologin-user-timeout=0" >/etc/lightdm/lightdm.conf.d/autologin.conf
 
 echo -n "Installing ZSH"
-apt-fast install -y zsh
+apt-fast install -y zsh lcov ctop
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #git clone https://github.com/zsh-users/antigen.git
 #chown -R vagrant:vagrant antigen

@@ -33,6 +33,9 @@ usermod -aG docker vagrant
 echo -n "Installing tooling"
 apt-fast install -y tilix yadm fasd git maven tmux
 
+echo -n "Installing kitty"
+su -c 'curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n' vagrant
+
 echo -n "Configuring autologin"
 echo "[Seat:*]
 autologin-guest=false

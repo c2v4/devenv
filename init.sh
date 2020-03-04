@@ -31,7 +31,7 @@ apt-fast install -y docker docker-compose
 usermod -aG docker vagrant
 
 echo -n "Installing tooling"
-apt-fast install -y tilix yadm fasd git maven
+apt-fast install -y tilix yadm fasd git maven tmux
 
 echo -n "Configuring autologin"
 echo "[Seat:*]

@@ -19,7 +19,7 @@ apt-fast install -y default-jdk
 echo -n "Installing Intellij"
 apt-fast install -y snapd ubuntu-make
 #snap install intellij-idea-ultimate --classic
-umake ide idea-ultimate ~/.idea
+umake ide idea-ultimate /home/vagrant/.idea
 ln -sf /home/vagrant/.idea/bin/idea.sh /usr/sbin/idea
 
 echo -n "Installing Node"
